@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class FigurasClasico{
+class figurasclasico{
 
     /*
     vamos a crear un programa que se encargue de realizar
@@ -23,7 +23,7 @@ class FigurasClasico{
         Scanner entrada = new Scanner(System.in);
 
         //variables
-        int base, altura, opcion, lado2, lado3, diametro;
+        int base, altura, opcion, lado1, lado2, lado3, diametro, apotema;
         char letra;
         //char es el tipo de dato y letra es el nombre de la variable
         double resultado;
@@ -33,10 +33,14 @@ class FigurasClasico{
         System.out.println("1.- Calcular el área de un cuadrado ");
         System.out.println("2.- Calcular el perímetro de un cuadrado ");
         System.out.println("3.- Calcular el área de un triángulo ");
-        System.out.print("4.- Calcular el perímetro de un círculo");
+        System.out.println("4.- Calcular el perímetro de un triángulo ");
         System.out.println("5.- Calcular el área de un circulo ");
         System.out.println("6.- Calcular el perímetro de un círculo ");
-        System.out.println("7.- Salir ");
+        System.out.println("7.- Calcular el área de un rectángulo ");
+        System.out.println("8.- Calcular el perímetro de un rectángulo ");
+        System.out.println("9.- Calcular el área de un pentágono ");
+        System.out.println("10.- Calcular el perímetro de un pentágono ");
+        System.out.println("11.- Salir ");
 
         //asignar la opción
 
@@ -49,72 +53,89 @@ class FigurasClasico{
                 //aqui es donde realizamos las operaciones
                 System.out.println("Ingrese el valor del lado");
                 base = entrada.nextInt();
-
                 resultado = base*base;
-
                 System.out.println("El área del cuadrado es de: "+resultado);
                 break;
 
-            case 1.1:
+            case 2:
                 System.out.println("Ingrese el valor del lado");
                 base = entrada.nextInt();
-
                 resultado = base * 4;
-
                 System.out.println("El perímetro del cuadrado es de: "+resultado);
                 break;
 
-            case 2:
+            case 3:
                 System.out.println("Ingrese el valor de la base");
                 base = entrada.nextInt();
-
                 System.out.println("Ingrese el valor de la altura");
                 altura = entrada.nextInt();
-
                 resultado = (base*altura)/2;
-
                 System.out.println("El área del triangulo es de: "+resultado);
                 break;
 
-            case 2.2:
+            case 4:
                 System.out.println("Ingrese el valor del primer lado");
-                base = entrada.nextInt();
-
+                lado1 = entrada.nextInt();
                 System.out.println("Ingrese el valor del segundo lado");
-                lado2 = entrada.nextlnt();
-
+                lado2 = entrada.nextInt();
                 System.out.println("Ingrese el valor del tercer y último lado");
                 lado3 = entrada.nextInt();
-
-                resultado = (base + lado2+ lado3);
-
-                System.out.pritnln("El perímetro del triángulo es de: "+resultado);
+                resultado = lado1 + lado2 + lado3;
+                System.out.println("El perímetro del triángulo es de: "+resultado);
                 break;
 
-            case 3:
+            case 5:
                 System.out.println("Ingrese el valor de la radio");
                 base = entrada.nextInt();
-
                 resultado = 3.1416*base*base;
-
                 System.out.println("El área del circulo es de: "+resultado);
                 break;
 
-            case 3.3:
+            case 6:
                 System.out.println("Ingrese el valor del diámetro");
                 diametro = entrada.nextInt();
-
                 resultado = 3.1416*diametro;
-
                 System.out.println("El perímetro del círculo es de: "+resultado);
                 break;
 
-            default:
-                System.out.println("Gracias por participar :D ");
-        
+            case 7:
+                System.out.println("Ingrese el valor de su base");
+                base = entrada.nextInt();
+                System.out.println("Ingrese el valor de la altura");
+                altura = entrada.nextInt();
+                resultado = base * altura;
+                System.out.println("El área del rectángulo es de: "+resultado);
+                break;
+ 
+            case 8:
+                System.out.println("Ingrese el valor de su base");
+                base = entrada.nextInt();
+                System.out.println("Ingrese el valor de la altura");
+                altura = entrada.nextInt();
+                resultado = (base + altura) * 2;
+                System.out.println("El perímetro del rectángulo es de: "+resultado);
+                break;
 
-            
-                
+            case 9:
+                System.out.println("Ingrese el valor del apotema");
+                apotema = entrada.nextInt();
+                System.out.println("Ingrese el valor de un lado");
+                base = entrada.nextInt();
+                resultado = (base * apotema)/2;
+                System.out.println("El área del pentágono es de: "+resultado);
+                break;
+
+            case 10:
+                System.out.println("Ingrese el valor de un lado");
+                base = entrada.nextInt();
+                resultado = base*5;
+                System.out.println("El períemtro del pentágono es de: "+resultado);
+                break;
+
+            default:
+                System.out.println("Gracias por participar :D "); 
+        
+   
                 
         }
 
