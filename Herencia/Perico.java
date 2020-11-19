@@ -19,7 +19,7 @@ public class Perico extends Animal{
     //metodos get y set
 
      //recibe u obtiene
-    public int getPalabraFavorita(){
+    public String getPalabraFavorita(){
         return palabra_favorita;
     }
     //envia o establece
