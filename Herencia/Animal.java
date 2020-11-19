@@ -58,7 +58,7 @@ public class Animal{
         this.tipo_alimento = tipo_alimento;
     }
 
-    public String getEdad(){
+    public int getEdad(){
         return edad;
     }
     //envia u establece (prefiero establece XDD)
