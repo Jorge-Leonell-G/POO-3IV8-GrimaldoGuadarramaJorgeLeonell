@@ -19,7 +19,7 @@ public class Hamster extends Animal{
     //metodos get y set
 
      //recibe u obtiene
-    public int getBolaHabitat(){
+    public String getBolaHabitat(){
         return bola_habitat;
     }
     //envia o establece
