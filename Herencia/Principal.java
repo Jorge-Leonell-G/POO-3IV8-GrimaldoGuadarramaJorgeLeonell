@@ -11,14 +11,20 @@ public class Principal{
 
         Perro dog = new Perro("Teddy", "Callejero", "Croquetas", 2, "Fuerte");
         Gato cat = new Gato("Miau", "Hogareño", "Atún", 1, 7);
-        //Perico ...
-        //Hamster...
+        //Perico
+        Perico parrot = new Perico("Pericles", "Loro gris", "Galletas", 1, "Saludos humanos");
+        //Hamster
+        Hamster ham = new Hamster("Hamilton", "Hamster chino", "Apio", 4, "Morado");
         //No recuerdo lol...
 
         //los metodos
         dog.mostrarPerro();
-        System.out.println("_______");
+        System.out.println("-------");
         cat.mostrarGato();
+        System.out.println("-------");
+        parrot.mostrarPerico();
+        System.out.println("-------");
+        ham.mostrarHamster();
         System.out.println("_______");
         
     }
