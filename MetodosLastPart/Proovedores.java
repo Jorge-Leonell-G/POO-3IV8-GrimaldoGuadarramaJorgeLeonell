@@ -14,6 +14,7 @@ public class Proovedores{
     private int costo[] = new int[10];
     private int producto_existente[] = new int[10];
 
+    //metodo menu
     public void menuPro(){
         do{
         text = JOptionPane.showInputDialog("Seleccione la funcion de la siguiente lista: \n1.- Suma total de costos\n2.- Costo Mayor\n3.- Costo Menor\n4.- Costo Promedio\n5.- Costo Total del Producto");

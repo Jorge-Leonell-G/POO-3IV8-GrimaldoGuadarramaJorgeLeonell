@@ -96,7 +96,7 @@ public class sueldoEmpleado{
         text = JOptionPane.showInputDialog("Ingrese su total de horas extras nocturnas trabajadas: ");
         extra_nocturnas = Integer.ParseInt(text);
         extra_nocturnas *= 60;
-        text = JOptionPane.showMessageDialog(null,"Su total correspondiente a las horas extras diurnas es de: "+extra_diurnas"\nY para las horas extras nocturnas trabajadas es de: "+extra_nocturnas);
+        text = JOptionPane.showMessageDialog(null,String.format("Su total correspondiente a las horas extras diurnas es de: "+extra_diurnas"\nY para las horas extras nocturnas trabajadas es de: "+extra_nocturnas));
         
     }
 
