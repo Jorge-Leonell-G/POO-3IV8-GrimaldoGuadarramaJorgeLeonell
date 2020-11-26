@@ -36,7 +36,7 @@ public class funcionGato /*extends java.util.stream.Collectors*/{
 
         }
 
-        System.out.println("[1, 2, 3]"+"\n"+"[4, 5, 6]"+"\n"+"[7, 8, 9]"+"\n");
+        System.out.println("[0, 1, 2]"+"\n"+"[3, 4, 5]"+"\n"+"[6, 7, 8]"+"\n");
 
     }
 
@@ -58,19 +58,21 @@ public class funcionGato /*extends java.util.stream.Collectors*/{
         String jG3=cat.subList(6, 9).toString();
 
         //ciclo if que determina las posibles opciones en las que el jugador que ocupa la "X" gana, es decir, el player1
-        if(((cat.get(0)=="X")&&(cat.get(4)=="X")&&(cat.get(8)=="X"))||
-            ((cat.get(2)=="X")&&(cat.get(4)=="X")&&(cat.get(6)=="X"))||
-            ((cat.get(2)=="X")&&(cat.get(5)=="X")&&(cat.get(8)=="X"))||
+        if(((cat.get(0)=="X")&&(cat.get(3)=="X")&&(cat.get(6)=="X"))||
             ((cat.get(1)=="X")&&(cat.get(4)=="X")&&(cat.get(7)=="X"))||
+            ((cat.get(2)=="X")&&(cat.get(5)=="X")&&(cat.get(8)=="X"))||
+            ((cat.get(0)=="X")&&(cat.get(4)=="X")&&(cat.get(8)=="X"))||
+            ((cat.get(2)=="X")&&(cat.get(4)=="X")&&(cat.get(6)=="X"))||
             (jG1.equals("[X, X, X]"))||(jG2.equals("[X, X, X]"))||(jG3.equals("[X, X, X]"))){
                 System.out.println("El jugador 1 ha ganado");
                 turno=9;
             //ahora procedemos a ahacer lo mismo, pero para las posibles opciones en donde el jugador
             //que ocupa la "O" sea el ganador, es decir, el player2        
-        }else if(((cat.get(0)=="O")&&(cat.get(4)=="O")&&(cat.get(8)=="O"))||
-            ((cat.get(2)=="O")&&(cat.get(4)=="O")&&(cat.get(6)=="O"))||
-            ((cat.get(2)=="O")&&(cat.get(5)=="O")&&(cat.get(8)=="O"))||
+        }else if(((cat.get(0)=="O")&&(cat.get(3)=="O")&&(cat.get(6)=="O"))||
             ((cat.get(1)=="O")&&(cat.get(4)=="O")&&(cat.get(7)=="O"))||
+            ((cat.get(2)=="O")&&(cat.get(5)=="O")&&(cat.get(8)=="O"))||
+            ((cat.get(0)=="O")&&(cat.get(4)=="O")&&(cat.get(8)=="O"))||
+            ((cat.get(2)=="X")&&(cat.get(4)=="X")&&(cat.get(6)=="X"))||
             (jG1.equals("[O, O, O]"))||(jG2.equals("[O, O, O]"))||(jG3.equals("[O, O, O]"))){
                 System.out.println("El jugador 2 ha ganado");
                 turno=9;
@@ -88,6 +90,18 @@ public class funcionGato /*extends java.util.stream.Collectors*/{
                     if(player1==true){
                         System.out.println("Es el turno del jugador 1");
                         Scanner entrada = new Scanner(System.in);
+                        //bloque try y catch
+                        /*try{
+                            System.out.println("Ingresa la posicion donde quieres colocar X");
+                            pos = entrada.nextInt();
+                            //salir del proceso try
+                            System.exit(0);
+                            //recibimos el error mediante el objeto e
+                        }catch(Exception e){
+                            System.out.println("Error: Solo ingrese numeros enteros de acuerdo al tablero");
+                            //pos = entrada.NextInt();
+                            System.out.println("Error: "+ e.getMessage());
+                        }*/
                         System.out.println("Ingresa la posicion donde quieres colocar X");
                         pos = entrada.nextInt();
 
@@ -95,12 +109,13 @@ public class funcionGato /*extends java.util.stream.Collectors*/{
                             catX(pos);
                             permiso=true; //Nuestra variable booleana en true indica que el jugador si puede usar la casilla en desuso
                         }else{ //El else arrojara mensaje de que la casilla ya esta llena, otrogando un false a permiso
-                            System.out.println("La casilla seleccionada esta ocupada, elija otra");
+                            System.out.println("La casilla seleccionada esta ocupada, espere al otro turno muajajaj");
                             System.out.println("\n");
 
                             //se derementa el truno para que sigan las 9 jugadas en curso
-                            permiso = false;
                             turno--;
+                            permiso = false;
+
                         }if(permiso = false){
                             player1 = false;
                         }
@@ -122,7 +137,7 @@ public class funcionGato /*extends java.util.stream.Collectors*/{
                             permiso=true;
 
                         }else{
-                            System.out.println("La casilla seleccionada esta ocpuada, elija otra");
+                            System.out.println("La casilla seleccionada esta ocupada, espere al otro turno muajajaj");
                             System.out.println("\n");
                             turno--;
                             permiso = false;

@@ -17,13 +17,13 @@ public class Gato{
     //metodo principal
     public static void main(String[] args){
         //variables
-        char match = 'R';
+        char match = 's';
 
         //instancia para la invocacion del objeto
         funcionGato g = new funcionGato();
 
         //ciclo while para los metodos
-        while(match == 'R'){
+        while(match == 's'){
             //metodo que contiene el funcionamiento del mismo
             g.Juego();
             //lo inicializamos con true para iniciar siempre una nueva partida con el jugador 1
@@ -35,21 +35,23 @@ public class Gato{
             Scanner entrada = new Scanner(System.in);
 
             //uso del bloque try y catch
-            try{
+            /*try{
 
                 System.out.println("Desea jugar otra partida... (s/n)");
                 match = entrada.next().charAt(0);
-                break;
+                system.exit(0);
 
             //"cachamos" el error con el objeto e    
             }catch(Exception e){
 
                 System.out.println("Ingrese un valor valido: ");
-                match = entrada.next().charAt(0);
+                //match = entrada.next().charAt(0);
                 System.out.println("Error: "+ e.getMessage());
                 
-            }
-            
+            }*/
+
+                System.out.println("Desea jugar otra partida... (s/n)");
+                match = entrada.next().charAt(0);
             
 
         }
@@ -57,14 +59,5 @@ public class Gato{
         System.out.println("Gracias por jugar! :D ");
 
     }
-
-
-
-
-
-
-
-
-
 
 }
