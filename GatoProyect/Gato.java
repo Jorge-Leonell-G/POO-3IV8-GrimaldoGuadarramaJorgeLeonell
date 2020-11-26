@@ -39,7 +39,7 @@ public class Gato{
 
                 System.out.println("Desea jugar otra partida... (s/n)");
                 match = entrada.next().charAt(0);
-                system.exit(0);
+                break;
 
             //"cachamos" el error con el objeto e    
             }catch(Exception e){

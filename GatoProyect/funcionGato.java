@@ -92,15 +92,20 @@ public class funcionGato /*extends java.util.stream.Collectors*/{
                         Scanner entrada = new Scanner(System.in);
                         //bloque try y catch
                         /*try{
-                            System.out.println("Ingresa la posicion donde quieres colocar X");
-                            pos = entrada.nextInt();
+                            do{
+                                System.out.println("Ingresa la posicion donde quieres colocar X");
+                                pos = entrada.nextInt(); 
+                            }while(pos >=0 && pos <9);
+                                 //System.out.println("Ingresa la posicion donde quieres colocar X");
+                                 //pos = entrada.nextInt();
                             //salir del proceso try
-                            System.exit(0);
+                            break;
                             //recibimos el error mediante el objeto e
                         }catch(Exception e){
                             System.out.println("Error: Solo ingrese numeros enteros de acuerdo al tablero");
                             //pos = entrada.NextInt();
                             System.out.println("Error: "+ e.getMessage());
+                            entrada.next();
                         }*/
                         System.out.println("Ingresa la posicion donde quieres colocar X");
                         pos = entrada.nextInt();
