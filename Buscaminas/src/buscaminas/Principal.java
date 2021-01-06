@@ -13,7 +13,7 @@ package buscaminas;
 
 /*
 Clase principal en donde controlaremos mas facil los procesos de nuestra ventana
-link de github: 
+link de github: https://github.com/Jorge-Leonell-G/POO-3IV8-GrimaldoGuadarramaJorgeLeonell/tree/main/Buscaminas
 */
 public class Principal {
     public static void main(String[] args) {
