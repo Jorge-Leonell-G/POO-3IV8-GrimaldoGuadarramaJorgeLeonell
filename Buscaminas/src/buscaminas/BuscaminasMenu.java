@@ -264,7 +264,7 @@ public class BuscaminasMenu extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 //metodo
-                int ID_eliminar = Integer.parseInt(JOptionPane.showInputDialog("Digite el ID del jugador "
+                int ID_eliminar = Integer.parseInt(JOptionPane.showInputDialog("Digite el puntaje del jugador "
                         + "que desea eliminar:  "));
                 
                 //Creamos otro objeto a partir de la clase (plantilla) Persona
